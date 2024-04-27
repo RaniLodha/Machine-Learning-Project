@@ -5,7 +5,7 @@ import pandas as pd
 
 def fetch_poster(movie_id):
     response = requests.get(
-        'https://api.themoviedb.org/3/movie/{}?api_key=e41c6c7d8a32c1ab0cddf8215f135e24&language=en-US'.format(
+        'https://api.themoviedb.org/3/movie/{}?api_key<<api-key>>&language=en-US'.format(
             movie_id))
     data = response.json()
     if 'poster_path' in data:
